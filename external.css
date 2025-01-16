@@ -1,0 +1,145 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #e6f7f9;
+}
+
+.art-gallery {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Top Section */
+.top-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #00a8c6;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.circle {
+    border-radius: 50%;
+    position: relative;
+}
+
+.circle.yellow {
+    background-color: #f7dc6f;
+    width: 80px;
+    height: 80px;
+}
+
+.circle.pink {
+    background-color: #f7786b;
+}
+
+.circle.large {
+    width: 120px;
+    height: 120px;
+}
+
+.circle.small {
+    width: 40px;
+    height: 40px;
+}
+
+/* Middle Section */
+.middle-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.rectangle {
+    height: 100px;
+    background-color: #00a8c6;
+    border-radius: 5px;
+}
+
+/* Bottom Section */
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 80px solid transparent;
+    position: relative;
+}
+
+.triangle.green {
+    border-bottom: 80px solid #008000;
+}
+
+.triangle.light-green {
+    border-bottom: 160px solid #b3d672;
+}
+
+
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+    width: 80%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #1a535c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #4ecdc4;
+}
+
+@media (max-width: 768px) {
+    .art-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .art-container {
+        grid-template-columns: 1fr;
+    }
+
+    input {
+        width: 90%;
+    }
+} 
+
+
